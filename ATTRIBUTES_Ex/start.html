@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>HTML Lesson</title>
-  </head>
-  <body></body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>HTML Lesson</title>
+</head>
+<body>
+  <form style="border: 1px darkslategray solid; width: fit-content;">
+    <label for="disabled_buttom" id="disabled_buttom" style="margin-left: 43px;"></label>This button is currently disabled</label>
+    <br>
+    <input type="button" style="width: 210px; margin-left: 43px;">
+    <hr>
+    <label for="range_1_100" id="range_0_100" style="margin: 43px;"><h1>Choose Left or Right!</h1></label>
+      <br>
+    <input type="range" style="margin-left: 80px;" name="range_0_100" min="1" max="100" list="tickmarks">
+    <datalist id="tickmarks">
+      <option value="1">
+      <option value="100">
+    </datalist>
+    <hr>
+    <label for="radio" id="radio" style="margin-left: 80px;">So, what you prefer?</label>
+    <br>
+    <input type="radio" id="none" name="what_you_prefer" value="None" style="margin-left: 80px;" checked="checked">
+    <label for="none">None</label>
+    <br>
+    <input type="radio" id="right" name="what_you_prefer" value="Right!" style="margin-left: 80px;">
+    <label for="right">Right!</label>
+    <br>
+    <input type="radio" id="left" name="what_you_prefer" value="Left!" style="margin-left: 80px;">
+    <label for="left">Left!</label>
+    <hr>
+    <label for="data_input" id=" data_input"  style="margin-left: 100px;">Today date:</label>
+    <br>
+    <input type="date" name="data_input" style="margin-left: 80px;">
+  </form>
+</body>
 </html>
