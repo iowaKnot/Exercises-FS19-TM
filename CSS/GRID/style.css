@@ -1,0 +1,108 @@
+section {
+    width: 378px;
+    height: 386px;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+div {
+    border: 1px solid rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+section.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        ". . . zero"
+        "piu meno per diviso"
+        "sette otto nove uguale"
+        "quattro cinque sei uguale"
+        "uno due tre uguale"
+        "zero-bottom-left punto AC uguale";
+}
+
+#zero {
+    border: none;
+    grid-area: zero;
+    background-color: rgb(99, 95, 95);
+    color: white;
+}
+
+#uno {
+    grid-area: uno;
+}
+
+#due {
+    grid-area: due;
+}
+
+#tre {
+    grid-area: tre;
+}
+
+#quattro {
+    grid-area: quattro;
+}
+
+#cinque {
+    grid-area: cinque;
+}
+
+#sei {
+    grid-area: sei;
+}
+
+#sette {
+    grid-area: sette;
+}
+
+#otto {
+    grid-area: otto;
+}
+
+#nove {
+    grid-area: nove;
+}
+
+#piu {
+    grid-area: piu;
+    background-color: rgb(230, 229, 229);
+}
+
+#meno {
+    grid-area: meno;
+    background-color: rgb(230, 229, 229);
+}
+
+#per {
+    grid-area: per;
+    background-color: rgb(230, 229, 229);
+}
+
+#diviso {
+    grid-area: diviso;
+    background-color: rgb(230, 229, 229);
+}
+
+#uguale {
+    grid-area: uguale;
+    background-color: rgb(247, 144, 168);
+}
+
+#AC {
+    grid-area: AC;
+}
+
+#punto {
+    grid-area: punto;
+}
+
+#zero-bottom-left {
+    grid-area: zero-bottom-left;
+}
