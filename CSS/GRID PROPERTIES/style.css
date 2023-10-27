@@ -1,118 +1,40 @@
-* {
-    margin: 0;
+body {
+  width: 60em;
+  margin: 0 auto;
 }
 
 section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 25px;
+  padding: 2em;
+  margin: 1em;
 }
 
-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
+#green {
+  background-color: #8ffda7;
 }
 
-p {
-    margin-top: 25px;
-    margin-left: 15px;
+#orange {
+  background-color: #ffc788;
+}
+
+#yellow {
+  background-color: #ffff92;
+}
+
+#red {
+  background-color: #ff919c;
+}
+
+#blue {
+  background-color: #98d2ff;
 }
 
 ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  padding: 0;
 }
 
-section.grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-        "g . ."
-        "y r b"
-        "o o b";
-}
-
-.grid1 {
-    list-style: none;
-    background-color: white;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-        "uno due"
-        "tre quattro";
-}
-
-.grid2 {
-    list-style: none;
-    background-color: white;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-        "letter-a letter-b"
-        "letter-c letter-d";
-}
-
-#g {
-    grid-column: span 3;
-    background-color: rgb(197, 253, 197);
-}
-
-#y {
-    grid-area: y;
-    background-color: rgb(255, 255, 196);
-}
-
-#o {
-    grid-area: o;
-    background-color: rgb(236, 214, 174);
-}
-
-#r {
-    grid-area: r;
-    background-color: rgb(237, 176, 176);
-}
-
-#b {
-    grid-area: b;
-    background-color: rgb(153, 194, 247);
-}
-
-#uno {
-    grid-area: uno;
-}
-
-#due {
-    grid-area: due;
-}
-
-#tre {
-    grid-area: tre;
-}
-
-#quattro {
-    grid-area: quattro;
-}
-
-#letter-a {
-    grid-area: letter-a;
-}
-
-#letter-b {
-    grid-area: letter-b;
-}
-
-#letter-c {
-    grid-area: letter-c;
-}
-
-#letter-d {
-    grid-area: letter-d;
+li {
+  background-color: white;
+  padding: 1em;
+  display: block;
+  margin: 1em;
 }
