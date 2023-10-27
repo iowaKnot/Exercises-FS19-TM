@@ -60,3 +60,11 @@ section .card {
 .text {
     padding: 5px;
 }
+
+@media(max-width: 375px) {
+
+}
+
+@media(max-width: 768px) {
+    
+}
