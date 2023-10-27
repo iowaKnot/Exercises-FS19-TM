@@ -1,25 +1,23 @@
-section {
-    width: 378px;
-    height: 386px;
-    margin-bottom: 1rem;
-    position: relative;
-}
+
+/* IN COLLABORAZIONE TRA MERLI E BARRANCA */
 
 div {
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid lightgrey;
+    border-radius: 5px;
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    justify-content: center;
     align-items: center;
     font-size: 24px;
 }
 
 section.grid {
+    width: max-content;
+    height: max-content;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 70px 70px 70px 70px;
+    grid-template-rows: 50px 60px 60px 60px 60px 60px;
     grid-template-areas: 
-        ". . . zero"
+        "zero zero zero zero"
         "piu meno per diviso"
         "sette otto nove uguale"
         "quattro cinque sei uguale"
@@ -28,81 +26,98 @@ section.grid {
 }
 
 #zero {
-    border: none;
-    grid-area: zero;
-    background-color: rgb(99, 95, 95);
+    padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    grid-column: zero;
+    background-color: #424c52;
     color: white;
+    border-top: none;
 }
 
 #uno {
     grid-area: uno;
+    background-color: #eff2f5;
 }
 
 #due {
     grid-area: due;
+    background-color: #eff2f5;
 }
 
 #tre {
     grid-area: tre;
+    background-color: #eff2f5;
 }
 
 #quattro {
     grid-area: quattro;
+    background-color: #eff2f5;
 }
 
 #cinque {
     grid-area: cinque;
+    background-color: #eff2f5;
 }
 
 #sei {
     grid-area: sei;
+    background-color: #eff2f5;
 }
 
 #sette {
     grid-area: sette;
+    background-color: #eff2f5;
 }
 
 #otto {
     grid-area: otto;
+    background-color: #eff2f5;
 }
 
 #nove {
     grid-area: nove;
+    background-color: #eff2f5;
 }
 
 #piu {
     grid-area: piu;
-    background-color: rgb(230, 229, 229);
+    background-color: #d2dce3;
 }
 
 #meno {
     grid-area: meno;
-    background-color: rgb(230, 229, 229);
+    background-color: #d2dce3;
 }
 
 #per {
     grid-area: per;
-    background-color: rgb(230, 229, 229);
+    background-color: #d2dce3;
 }
 
 #diviso {
     grid-area: diviso;
-    background-color: rgb(230, 229, 229);
+    background-color: #d2dce3;
 }
 
 #uguale {
     grid-area: uguale;
-    background-color: rgb(247, 144, 168);
+    background-color: #f77077;
 }
 
 #AC {
     grid-area: AC;
+    background-color: #eff2f5;
 }
 
 #punto {
     grid-area: punto;
+    background-color: #eff2f5;
 }
 
 #zero-bottom-left {
     grid-area: zero-bottom-left;
+    background-color: #eff2f5;
 }
