@@ -1,0 +1,35 @@
+body {
+    border: 1px solid rgb(154, 154, 154);
+    border-radius: 2%;
+    width: 250px;
+}
+
+hr {
+    width: 247px;
+    color: rgb(238, 237, 237);
+}
+
+section.card {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.card__header img {
+    padding: 0;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-size: 18px;
+    padding: 2px;
+}
+
+
+
