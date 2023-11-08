@@ -6,7 +6,6 @@
 //Utilizza map per creare un nuovo array contenente i nomi degli studenti in maiuscolo.
 //Utilizza filter per trovare gli studenti con voti superiori a 85.
 
-
 const studenti = [
   { nome: "Alice", voto: 95 },
   { nome: "Bob", voto: 88 },
@@ -28,4 +27,4 @@ const nameCaps = studenti.map(name => name.nome.toUpperCase());
 console.log(nameCaps); // map
 
 const filter85 = studenti.filter(vote => vote.voto > 85);
-console.log(filter85);
+console.log(filter85); // filter
