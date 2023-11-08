@@ -1,11 +1,5 @@
 // Implementare la funzione ageAverage che, dato un array di persone, calcola l'età media.
 
-function calculateAverageAge(persons) {
-  const sum = persons.reduce((a, user) => a + user.age, 0);
-  const media = sum / persons.length;
-  console.log(media);
-}
-
 const persons = [
   { name: 'Paul', age: 16 },
   { name: 'George', age: 17 },
@@ -18,6 +12,12 @@ const persons = [
   { name: 'Sandra', age: 34 },
   { name: 'Alice', age: 28 }
 ];
+
+function calculateAverageAge(arg) {
+  const sum = arg.reduce((a, user) => a + user.age, 0);
+  const media = sum / arg.length;
+  return Math.round(media);
+}
 
 const average = calculateAverageAge(persons);
 console.log(persons);
