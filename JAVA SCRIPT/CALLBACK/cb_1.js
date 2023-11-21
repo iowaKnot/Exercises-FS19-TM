@@ -9,7 +9,7 @@ function doubleArray(arr, callback) {
     for(let i = 0; i < arr.length; i++) {
         solution.push(callback(arr[i]));
     }
-    return solution; // Ale, vorrei scrivere questa cosa con il metodo .forEach(), ma non ci sto riuscendo, mi potresti spiegare come fare? Grazie mille!
+    return solution; // Ale, vorrei scrivere questo con il metodo .forEach(), ma non ci sto riuscendo, mi potresti spiegare come fare? Grazie mille!
 };
 
 function doubleValue(num) {
