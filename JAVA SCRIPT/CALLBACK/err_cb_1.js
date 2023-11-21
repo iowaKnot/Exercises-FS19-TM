@@ -3,21 +3,21 @@
 // Modificare la funzione performOperation per gestire l'errore e registrare un messaggio di errore.
 
 function performOperation(a, b, callback) {
-    if (a === 'Number' && b === 'Number') {
-        callback(null, 'a && b are valid numbers.');
+    const result = a * b;
+    
+    if (isNaN(result)) {
+        callback(new Error('Il risultato che vuoi ottenere deve essere un numero valido, verifica che i parametri siano numeri.'), null);
     } else {
-        callback(new Error('a &&/|| b are not valid numbers!'), null)
+        callback(null, result);
     }
-};
+}
 
-function displayResult(result) {
-    console.log(`Il risultato é: ${result}`);
-};
-
-performOperation(5, 3, (error, data) => {
+function displayResult(error, result) {
     if (error) {
-        console.log(error);
+        console.error(`L'errore é il seguente: ${error.message}`);
     } else {
-        console.log(data(a * b));
+        console.log(`Il risultato è: ${result}`);
     }
-});
+}
+
+performOperation(7, 3, displayResult);
