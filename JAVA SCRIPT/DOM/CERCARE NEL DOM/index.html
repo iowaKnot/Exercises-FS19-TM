@@ -1,0 +1,86 @@
+<!--Recuperare il valore di ciascun campo di input e creare un oggetto person contenente le proprietà: firstName, lastName e age.
+
+Infine recuperare l'elemento form e aggiungere l'attributo data-person contenente l'oggetto person in formato json.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <form>
+            <div>
+                <label>First Name:</label>
+                <input type="text" class="form-input" id="firstName" value="Mario" placeholder="firstName" />
+            </div>
+            <div>
+                <label>Last Name:</label>
+                <input type="text" class="form-input" id="lastName" value="Rossi" placeholder="lastName" />
+            </div>
+            <div>
+                <label>Age:</label>
+                <input type="number" class="form-input" id="age" value="25" placeholder="age" />
+            </div>
+        </form>
+    </div>
+
+    <script>
+
+        const person = {
+            firstName: "",
+            lastName: "",
+            age: "",
+        }
+
+        person.firstName = document.querySelector("#firstName");
+        person.lastName = document.querySelector("#lastName");
+        person.age = document.querySelector("#age");
+
+        const myObj = () => {
+            try {
+                const property1 = person.firstName;
+                const property2 = person.lastName;
+                const property3 = person.age;
+
+                console.log(property1);
+                console.log(property2);
+                console.log(property3);
+            } catch (error) {
+                console.log(error.message);
+            }
+        }
+
+        const myDiv = document.querySelector("#container");
+        const myForm = myDiv.children[0];
+        
+        /*const raffa = myForm.setAttribute("data-person", JSON.stringify(person));
+        console.log(raffa);*/
+        
+        const fetchData = async () => {
+            try {
+                const response = await fetch(myDiv.children[0], { method: "GET" });
+                const result = await myDiv.children[0].setAttribute("data-person", JSON.stringify());
+                if (response.ok) {
+                    myForm = result;
+                } else {
+                    throw new Error(result);
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        
+        myObj();
+        fetchData(person);
+
+
+    </script>
+
+</body>
+
+</html>
