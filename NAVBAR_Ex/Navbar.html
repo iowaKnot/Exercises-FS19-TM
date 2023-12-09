@@ -3,38 +3,20 @@
 <head>
     <title>Navbar Exercise</title>
 </head>
-<body>
-    <table>
-        <tr>
-            <th>
-                <h1>Navbar</h1>
-            </th>
-            <th width="100">
-                <h2>Home</h2>
-            </th>
-            <th width="50">
-                <h2>Link</h2>
-            </th>
-            <th width="150">
-                <select name="select_box">
-                    <option>Dropdown</option>
-                </select>
-            </th>
-            <th width="100">
-                <h3>Disabled</h3>
-            </th>
-            <th>
-                <div style="border: 2px grey solid; width: 250px;">
-                    <option style="margin-left: 10px;">Search</option>
-                </div>
-            </th>
-            <th width="200">
-                <div style="border: 2px green solid; width: 100px;">
-                    <option style="margin-left: 10px;"><green>Search</green></option>
-                </div>
-            </th>
-        </tr>
-    </table>
-    <hr>
+<body style="top: 0; left: 0;">
+    <nav style="display: flex; flex-direction: row; justify-content: space-between; padding: 5px; background-color: rgb(50, 50, 50);">
+        <div style="display: flex; flex-direction: row; justify-content: center;">
+            <a style="margin-right: 30px; text-decoration: none; color: white; margin-left: 10px;" href="#"><h1>Navbar</h1></a>
+            <a style="margin-right: 30px; text-decoration: none; color: white;" href="#"><h2>Home</h2></a>
+            <a style="margin-right: 30px; text-decoration: none; color: rgb(161, 161, 161);" href="#"><h2>Link</h2></a>
+            <label style="margin-right: 30px; display: flex; color: rgb(180, 179, 179);" for="dropdown"><h2>Dropdown</h2></label>
+                <select style="margin-right: 30px; height: 10px; width: 20px;align-self: center; color: rgb(180, 179, 179); background-color: transparent; border: 0;" name="dropdown" id="dropdown"></select>
+            <a href="#" style="text-decoration: none; color: rgb(75, 75, 75);"><h2>Disabled</h2></a>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <input style="width: 300px; height: 40px; border: 1px solid lightgray; border-radius: 7px; padding: 5px; margin-right: 5px; font-size: x-large; font-weight: 500;" type="text" placeholder="Search"/>
+            <button style="border: 1px solid green; border-radius: 7px; height: 50px; width: 100px; padding: 5px; color: green; background-color: transparent; font-size: x-large;" >Search</button>
+        </div>
+    </nav>
 </body>
 </html>
