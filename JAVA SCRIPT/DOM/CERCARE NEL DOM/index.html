@@ -4,85 +4,61 @@ Infine recuperare l'elemento form e aggiungere l'attributo data-person contenent
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="container">
-        <form>
-            <div>
-                <label>First Name:</label>
-                <input type="text" class="form-input" id="firstName" value="Mario" placeholder="firstName" />
-            </div>
-            <div>
-                <label>Last Name:</label>
-                <input type="text" class="form-input" id="lastName" value="Rossi" placeholder="lastName" />
-            </div>
-            <div>
-                <label>Age:</label>
-                <input type="number" class="form-input" id="age" value="25" placeholder="age" />
-            </div>
-        </form>
+      <form>
+        <div>
+          <label>First Name:</label>
+          <input
+            type="text"
+            class="form-input"
+            id="firstName"
+            value="Mario"
+            placeholder="firstName"
+          />
+        </div>
+        <div>
+          <label>Last Name:</label>
+          <input
+            type="text"
+            class="form-input"
+            id="lastName"
+            value="Rossi"
+            placeholder="lastName"
+          />
+        </div>
+        <div>
+          <label>Age:</label>
+          <input
+            type="number"
+            class="form-input"
+            id="age"
+            value="25"
+            placeholder="age"
+          />
+        </div>
+      </form>
     </div>
 
     <script>
+      const $firstName = document.querySelector("#firstName");
+      const $lastName = document.querySelector("#lastName");
+      const $age = document.querySelector("#age");
+      const $form = document.querySelector("form");
 
-        const person = {
-            firstName: "",
-            lastName: "",
-            age: "",
-        }
+      const person = {
+        firstname: $firstName.value,
+        lastName: $lastName.value,
+        age: $age.value,
+      };
 
-        person.firstName = document.querySelector("#firstName");
-        person.lastName = document.querySelector("#lastName");
-        person.age = document.querySelector("#age");
-
-        const myObj = () => {
-            try {
-                const property1 = person.firstName;
-                const property2 = person.lastName;
-                const property3 = person.age;
-
-                console.log(property1);
-                console.log(property2);
-                console.log(property3);
-            } catch (error) {
-                console.log(error.message);
-            }
-        }
-
-        const myDiv = document.querySelector("#container");
-        const myForm = myDiv.children[0];
-        
-        /*const try = myForm.setAttribute("data-person", JSON.stringify(person));
-        console.log(try);*/
-        
-        const fetchData = async () => {
-            try {
-                const response = await fetch(myDiv.children[0], { method: "GET" });
-                const result = await myDiv.children[0].setAttribute("data-person", JSON.stringify());
-                if (response.ok) {
-                    myForm = result;
-                } else {
-                    throw new Error(result);
-                }
-            } catch (error) {
-                console.log(error);
-            }
-        }
-        
-        myObj();
-        fetchData(person);
-
-        // Ho provato, credo di aver scritto correttamente la parte di cui é richiesto di prendere le proprietá nell'oggetto person, ma non ho ancora ben chiaro come utilizzare il JSON.
-
-
+      $form.setAttribute("data-person", JSON.stringify(person));
     </script>
-
-</body>
-
+  </body>
 </html>
