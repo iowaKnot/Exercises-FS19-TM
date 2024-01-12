@@ -65,3 +65,5 @@ function fetchJobById(id) {
         }, 2000)
     })
 }
+
+Promise.all([fetchPersonById(1), fetchJobById(2)]).then((data) => console.log(data)).catch((error) => console.error(error));
